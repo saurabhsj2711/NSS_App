@@ -37,23 +37,14 @@ public class NSSServiceImpl implements NSSService {
 
 	@Override
 	public int loginUser(Login member) {
-		
-		int f =0;
-		List ar = registerDB.loginUser();
-		Login ele ;
-		for(int i=0; i < ar.size(); i++)
+		String s = ""+registerDB.loginUser(member);
+		int i = 0;
+		if(s.equals("null"))
 		{
-		    ele = (Login) ar.get(i);
-
-			if(member.email.equals(ele.email) && member.password.equals(ele.password))
-			{
-				f=1;
-				break;
-			}
-
+			return 0;
 		}
-		
-		return f;
+		i = Integer.parseInt(s);
+		return i;
 		
 		
 	}
