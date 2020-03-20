@@ -7,10 +7,10 @@ function loadContact()
     $("#content").load("html/contact.html");
 }
 
-function loadRegister()
+/*function loadRegister()
 {
-    $("#content").load("html/register.html");
-}
+    $("#content").load("js/register1.js");
+}*/
 
 
 function loadBots() {
@@ -44,9 +44,9 @@ $(document).ready(function() {
         loadContact();
     });
     
-    $("#navRegister").click(function() {
+    /*$("#navRegister").click(function() {
         loadRegister();
-    });
+    });*/
 
     $(document).on('click', '#chat', function() {
        alert($(this).text()); 
