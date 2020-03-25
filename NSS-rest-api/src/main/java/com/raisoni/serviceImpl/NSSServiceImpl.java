@@ -33,7 +33,8 @@ public class NSSServiceImpl implements NSSService {
 	@Override
 	public List<Events> getAllEvents() {
 		
-		return registerDB.getAllEvents();	}
+		return registerDB.getAllEvents();	
+		}
 
 	@Override
 	public int loginUser(Login member) {
