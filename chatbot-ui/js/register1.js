@@ -1,6 +1,11 @@
 function loadRegister(){
     $("#content").load("html/register.html");
 }
+
+function loadLogin(){
+    $("#content").load("html/login.html");
+}
+
 function acceptForm()
 {
 
@@ -126,10 +131,26 @@ alert("Validation Done");
 
 }
 
+/////////////////////////login Validate //////////////////////////////////////
+
+function loginValidate()
+{
+	   var eml = document.getElementById('loginEmail').value;
+   	   var pss = document.getElementById('loginPassword').value;
+
+
+	alert(email+"logged in successfully");
+}
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+
 $(document).ready(function() {
 
     
-       	     alert("Your Registration DOM is ready  !!!");
+       	    
              $("#navRegister").click(function() {
        
              		loadRegister();
@@ -145,5 +166,10 @@ $(document).ready(function() {
 		
 
 	    });
+
+	    $("#navLogin").click(function() {
+       
+             		loadLogin();
+     	     });
 
   })

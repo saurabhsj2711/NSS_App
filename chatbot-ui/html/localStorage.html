@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Local Storage</title>
+
+	<script>
+		if(localStorage)
+		{
+			document.write("Supports localStorage");
+		}
+		else
+		{
+			document.write("Does not supports localStorage");
+		}
+
+	function storeData()
+	{
+		localStorage.username = document.getElementById("username").value;
+		document.getElementById("span1").innerHTML=localStorage.username;
+		
+	}
+
+	</script>
+</head>
+<body>
+	<br>
+	Username : 
+	<input type="text" id="username">
+
+	<input type="button" onclick="storeData()" value="show">
+
+<br>
+	<span id="span1"></span>
+</body>
+</html>
